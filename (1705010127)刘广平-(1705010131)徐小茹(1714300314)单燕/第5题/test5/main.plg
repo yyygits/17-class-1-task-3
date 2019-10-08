@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: main - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\刘广平\AppData\Local\Temp\RSP4C7.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/main.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp"
+]
+Creating command line "cl.exe @"C:\Users\刘广平\AppData\Local\Temp\RSP4C7.tmp"" 
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(6) : error C2632: 'long' followed by 'long' is illegal
+C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(36) : error C2374: 'i' : redefinition; multiple initialization
+        C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(30) : see declaration of 'i'
+C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(45) : error C2374: 'i' : redefinition; multiple initialization
+        C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(30) : see declaration of 'i'
+C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(48) : error C2374: 'i' : redefinition; multiple initialization
+        C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(30) : see declaration of 'i'
+C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(67) : error C2374: 'i' : redefinition; multiple initialization
+        C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(56) : see declaration of 'i'
+C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(76) : error C2374: 'i' : redefinition; multiple initialization
+        C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(56) : see declaration of 'i'
+C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(85) : error C2374: 'i' : redefinition; multiple initialization
+        C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(56) : see declaration of 'i'
+C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(94) : error C2374: 'i' : redefinition; multiple initialization
+        C:\Users\刘广平\Desktop\作业\软件工程作业\作业三\(1705010127)刘广平-(1705010131)徐小茹(1714300314)单燕\第5题\test5\main.cpp(56) : see declaration of 'i'
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+main.obj - 8 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
