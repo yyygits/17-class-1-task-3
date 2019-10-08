@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<title>纸牌游戏</title>
+	</head>
+	<body>
+		<div id="app" class="container">
+			<div class="item itema" v-show="round != 0" v-cloak>
+				<div class="col-xs-4 col-md-3" v-for="(item,index) in player1" :key="index">
+					<div class="thumbnail"  v-cloak>
+						<span class="icon" :style="{color:item.color}" v-html="item.content"></span>
+						<span class="number">{{item.number}}</span>
+					</div>
+				</div>
+				<div><span style="background: mediumvioletred;width: 10px;" v-cloak>{{p1_name}}</span></div>
+			</div>
+
+			<div class="info">
+				<div class="col-xs-9" style="margin: 0 auto;">
+					<div class="thumbnail" v-cloak style="background: none;border: none;">
+						<span class="tips" v-show="round == 0">请点击【开始】,开始游戏</span>
+						<span v-show="round != 0">第{{round}}回合</span>
+						<div v-show="round != 0" >{{p1_name}}得分：<span id="R">{{getRcount}}</span> ({{getRtype}})</div>
+						<div v-show="round != 0">{{p2_name}}得分：<span  id="B">{{getBcount}}</span> ({{getBtype}})</div>
+						<div v-show="round != 0 && getRcount != getBcount ">胜者为：{{getRcount > getBcount ? p1_name:p2_name}}</div>
+						<div v-show="round != 0 &&getRcount == getBcount">平局</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="item itemb" v-show="round != 0" v-cloak>
+				<div class="col-xs-4 col-md-3" v-for="(item,index) in player2" :key="index">
+					<div class="thumbnail" v-cloak>
+						<span class="icon" :style="{color:item.color}" v-html="item.content"></span>
+						<span class="number">{{item.number}}</span>
+					</div>
+				</div>
+				<div><span style="background: royalblue;width: 10px;" v-cloak>{{p2_name}}</span></div>
+			</div>
+			<div class="footer">
+				<button class="btn btn-info" :disabled="this.dialog" @click="start">开始</button>
+				<button class="btn btn-danger" :disabled="this.dialog||this.round === 0" @click="close">结束</button>
+			</div>
+
+			<div class="dialog" v-show="dialog" v-cloak>
+				<span style="float: right;" @click="close_dialog">关闭</span>
+				<br />
+				<br />
+				<div>本次游戏共进行了{{this.round}}局</div>
+				<div>同花胜次：{{getTHsum }}</div>
+				<div>同点胜次：{{getTDsum }}</div>
+				<div>顺子胜次：{{getSZsum }}</div>
+				<div>对子胜次：{{getDZsum }}</div>
+				<div>杂牌胜次：{{getZPsum }}</div>
+				<div>平局次数：{{this.round - getTHsum-getTDsum-getSZsum-getDZsum-getZPsum}}</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/Vue.js"></script>
+	<script src="js/store.js"></script>
+	<script src="js/T5.js"></script>
+</html>
