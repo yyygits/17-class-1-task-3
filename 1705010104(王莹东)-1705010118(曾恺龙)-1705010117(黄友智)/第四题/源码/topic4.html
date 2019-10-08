@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>工资结算</title>
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+		<link rel="stylesheet" href="css/ano.css" />
+	</head>
+	<body>
+		<h1 style="text-align: center;">教师工资档案</h1>
+		<div id="app" class="container">
+			<div class="list">
+				<table class="table table-striped" v-show="this.arr">
+					<thead>
+						<tr>
+							<th class="danger">Name</td>
+							<th class="success">AnnualWages</td>
+							<th class="warning">SuportNum</td>
+							<th class="info">DateStart</td>
+							<th class="active">DateEnd</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr v-for="(item,index) in this.arr" :key="index">
+							<td class="danger">{{item.name}}</td>
+							<td class="success">{{item.salary}}</td>
+							<td class="warning">{{item.familyNum}}</td>
+							<td class="info">{{item.dateStart}}</td>
+							<td class="active">{{item.dateEnd}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<button class="btn btn-danger" style="height: 30px;width: 8%;" @click="start()">导入档案</button>
+			<button class="btn btn-info" style="height: 30px;width: 8%;" @click="generate()">生成档案</button>
+			<div class="list">
+				<table class="table table-striped" v-show="newArr">
+					<thead>
+						<tr>
+							<th class="danger">Name</td>
+							<th class="success">AnnualWages</td>
+							<th class="warning">SuportNum</td>
+							<th class="info">DateStart</td>
+							<th class="active">DateEnd</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr v-for="(item,index) in newArr" :key="index">
+							<td class="danger">{{item.name}}</td>
+							<td class="success">{{item.salary}}</td>
+							<td class="warning">{{item.familyNum}}</td>
+							<td class="info">{{item.dateStart}}</td>
+							<td class="active">{{item.dateEnd}}</td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/store.js"></script>
+	<script src="js/Vue.js"></script>
+	<script src="js/T4.js"></script>
+</html>
